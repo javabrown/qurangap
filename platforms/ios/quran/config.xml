@@ -5,7 +5,7 @@
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
     <access origin="*"/>
-    <content src="index.html" />
+    <content src="web/index.html" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />

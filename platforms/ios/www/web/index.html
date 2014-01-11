@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+         
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+             
+            <script src="cordova-2.5.0.js"></script>
+            
+            <!-- plug -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="keywords" content="mobile portfolio, mobile portfolio site">
+                    <meta name="author" content="raja khan">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                            
+                            <script src="http://www.jquery4u.com/demos/mobileportfoliosite/js/jquery-1.8.3.min.js"></script>
+                            <script src="http://www.jquery4u.com/demos/mobileportfoliosite/js/jquery.mobile-1.2.0.min.js"></script>
+                            
+                            <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/jquery.mobile.structure-1.2.0.min.css" rel="stylesheet">
+                                <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/jquery.mobile.theme-1.2.0.min.css" rel="stylesheet">
+                                    <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/jquery.mobile-1.2.0.min.css" rel="stylesheet">
+                                        
+                                        <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/photoswipe.css" rel="stylesheet">
+                                            <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/style.css" rel="stylesheet">
+                            
+            
+            <script>
+               document.addEventListener("deviceready", onDeviceReady, false);
+                
+                // Cordova is ready
+                //
+                function onDeviceReady() {
+                    //alert('load done');
+                     //alert($("#chapter-ul").html());
+                }
+                
+                // Populate the database
+                
+                var quranChapters = ["Al Fatiha", "AlBaqara","Al Imran","An Nisa'","Al Maida","Al An'am","Al A'raf","Al Anfal","At Tawba", "Yunus","Hud","Yusuf","Ar Ra'd", "Ibrahim", "Al Hijr", "An nahl","Al Isra'","Al Kahaf","Marayam","Ta Ha","Al Anbiya'","Al Hajj","Al Mu'minun","An Nur","Al Furqan","Ash Shu'ara'","An Naml","Al Qasas","Al 'Ankabut","Ar Rum"];
+                
+            </script>
+    </head>
+   
+    
+    <body>
+        
+        <!-- splace page -->
+        <div data-role="page" id="splace">
+            <div data-role="header" data-position="fixed">
+                <h1><a href="#splace" data-icon="grid">القرآن الكريم</a></h1>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#setting" data-icon="gear">Setting</a></li>
+                        <li><a href="#" data-icon="search">Search</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+            
+            <div data-role="content" data-theme="a">
+                <img src="http://thegospelcoalition.org/blogs/tgc/files/2013/06/kaaba.jpg" style="width: 100%;max-width: 100%"/>
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">&copy; Copyright 2013</p>
+            </div>
+        </div>
+        <!-- setting page -->
+        <div data-role="page" id="setting"  data-title="setting">
+            <div data-role="header" data-position="fixed">
+                <h1><a href="#splace" data-icon="home">القرآن الكريم</a></h1>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#setting" data-icon="gear" class="ui-btn-active">Setting</a></li>
+                        <li><a href="#" data-icon="search">Search</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                
+                <!-- a data-role="button" href="#splace" data-direction="reverse" data-icon="home" data-corners="false">Home</a -->
+            </div>
+            
+            <div data-role="content"  data-theme="a">
+                <div class="pt-menu">
+                    ddddddddddddddddd
+                </div>
+                
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">&copy; Copyright 2013</p>
+            </div>
+        </div>
+        
+        
+        
+        <!-- home page -->
+        <div data-role="page" id="home"  data-title="home">
+            <div data-role="header" data-position="fixed">
+                <h1><a href="#splace" data-icon="home">لقرآن الكريم</a></h1>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+                        <li><a href="#setting" data-icon="gear">Setting</a></li>
+                        <li><a href="#" data-icon="search">Search</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                
+                <!-- a data-role="button" href="#splace" data-direction="reverse" data-icon="home" data-corners="false">Home</a -->
+            </div>
+            
+            <div data-role="content">
+                <div class="pt-menu">
+                    <a data-theme="c" data-corners="false" data-role="button"  data-transition="fade" href="#portfolio">
+                        <img src="https://lh4.ggpht.com/dIZHv6xOa-RY0ciokj5J2SVJm3Yx5_AaljqkN-bZaVK1-CpKgtiadF1cVhOpLrgYJ1E=w170" width="65px" alt="rss" style="display: block; margin: 0 auto">
+                            Quraan
+                        </img>
+                    </a>
+                    <!--<a data-theme="d" data-corners="false" data-role="button"  data-transition="fade" href="#portfolio">
+                     <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcSOBXvGIUVC4Io40stLS7gwoF1B-QzXcTsj2FUg2hidMR1svgmbDg" width="65px" alt="rss" style="display: block; margin: 0 auto">
+                     Gita
+                     </img>
+                     </a>-->
+                    <a data-theme="c" data-corners="false" data-role="button"  data-transition="fade" href="#portfolio">
+                        <img src="http://2.cdn.site.mobi/images/appicons/registrar/m/m./m.ahlulbaytscouts.org/94454/icon_64.png" width="65px" alt="rss" style="display: block; margin: 0 auto">
+                            Reminder
+                        </img>
+                    </a>
+                    
+                    <a data-theme="c" data-corners="false" data-role="button"  data-transition="fade" href="#portfolio">
+                        <img src="http://cdn1.iconfinder.com/data/icons/black-religious-icons/256/Bible.png" width="65px" alt="rss" style="display: block; margin: 0 auto">
+                            Translator
+                        </img>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">&copy; Copyright 2013</p>
+            </div>
+        </div>
+        
+        
+        <!-- page-2 -->
+        <div data-role="page" id="portfolio" data-title="portfolio">
+            <div data-role="header" data-position="fixed">
+                <h1>Holly Qur'an</h1>
+                <a data-role="button" href="#home" data-direction="reverse" data-icon="home" data-corners="false">Home</a>
+            </div>
+            
+            <div data-role="content" data-theme="a">
+                 
+                    <ul id="chapter-ul" data-inset="true" data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-corner-none"  data-theme="b">
+                        
+                        <!-- chapter item 1 -->
+                        
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-d ui-corner">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#quran" class="ui-link-inherit ui-corner-none">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb ui-corner-none">
+                                            <h3 class="ui-li-heading">Chapter 1:</h3>
+                                            <p class="ui-li-desc">Al-Fatihah</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#quran" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <!-- chapter item 2 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#quran" class="ui-link-inherit">
+                                        <img src="https://lh5.ggpht.com/qtHLGeJ8BVmi2peqYgkNH-q6czyYC9Rrqqbp6YBd49Ufdw6KFNdpfQMOxs6LaMqzPQ=w170" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 2</h3>
+                                            <p class="ui-li-desc">Al-Baqara</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#quran" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <!-- chapter item 3 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 3</h3>
+                                            <p class="ui-li-desc">Al Imran.</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+ 
+                        <!-- chapter item 4 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 4</h3>
+                                            <p class="ui-li-desc">An Nisa.</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <!-- chapter item 5 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 5</h3>
+                                            <p class="ui-li-desc">Al Maida</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+ 
+                        <!-- chapter item 6 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 6</h3>
+                                            <p class="ui-li-desc">Al An'am </p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+
+                        <!-- chapter item 7 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 7</h3>
+                                            <p class="ui-li-desc">Al A'raf</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <!-- chapter item 8 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 8</h3>
+                                            <p class="ui-li-desc">Al Anfal</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <!-- chapter item 9 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 9</h3>
+                                            <p class="ui-li-desc">At Tawba</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+
+                        <!-- chapter item 10 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Chapter 10</h3>
+                                            <p class="ui-li-desc">Yunus</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        
+                        <!-- chapter item 30 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-c">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#portfolio2" class="ui-link-inherit">
+                                        <img src="http://m.img.brothersoft.com/iphone/1338/536075338_icon175x175.jpg" class="ui-li-thumb">
+                                            <h3 class="ui-li-heading">Portfolio Item 2</h3>
+                                            <p class="ui-li-desc">Another portfolio item example.</p>
+                                            </a>
+                                </div>
+                            </div>
+                            <a href="#portfolio1" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">&copy; Copyright 2013</p>
+            </div>
+        </div>
+        
+        
+        <!-- page-3 -->
+        <div data-role="page" id="quran" data-title="portfolio">
+            <div data-role="header" data-position="fixed">
+                <h1>Portfolio Gallery 2</h1>
+                <a data-role="button" href="#portfolio" data-transition="flip" data-icon="arrow-l" data-corners="false">Back</a>
+            </div>
+            
+            <div data-role="content">
+                <img src="https://farm4.staticflickr.com/3693/9046044952_8b7f2be179_z.jpg" style="width: 100%;max-width: 100%"/>
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">&copy; Copyright 2013</p>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
