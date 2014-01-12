@@ -25,9 +25,9 @@
 
 @interface CDVCommandDelegateImpl : NSObject <CDVCommandDelegate>{
     @private
-    __weak CDVViewController* _viewController;
+     CDVViewController* _viewController;
     @protected
-    __weak CDVCommandQueue* _commandQueue;
+     CDVCommandQueue* _commandQueue;
 }
 - (id)initWithViewController:(CDVViewController*)viewController;
 @end
