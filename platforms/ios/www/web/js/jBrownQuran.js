@@ -115,13 +115,13 @@ var jPages = {
                    }
              });
               
-             alert('turn launched');
+             //alert('turn launched');
      }
          
 };
 
 $(document).on("pageinit", "#quran", function(){
-    alert("quran init called");
+    //alert("quran init called");
     
     jPages.launch();
     
