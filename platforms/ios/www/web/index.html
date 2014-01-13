@@ -10,27 +10,85 @@
             
             <!-- plug -->
             <meta name="viewport" content="width=device-width, initial-scale=1">
-                <meta name="keywords" content="mobile portfolio, mobile portfolio site">
-                    <meta name="author" content="raja khan">
-                        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="keywords" content="mobile portfolio, mobile portfolio site">
+            <meta name="author" content="raja khan">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
                             
-                            <script src="http://www.jquery4u.com/demos/mobileportfoliosite/js/jquery-1.8.3.min.js"></script>
-                            <script src="http://www.jquery4u.com/demos/mobileportfoliosite/js/jquery.mobile-1.2.0.min.js"></script>
-                            <script src="js/jBrownQuran.js"></script>
-                            
-                            <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/jquery.mobile.structure-1.2.0.min.css" rel="stylesheet">
-                                <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/jquery.mobile.theme-1.2.0.min.css" rel="stylesheet">
-                                    <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/jquery.mobile-1.2.0.min.css" rel="stylesheet">
+            <script src="js/jquery-1.8.3.min.js"></script>
+            <script src="js/jquery.mobile-1.2.0.min.js"></script>
+            <script src="js/jBrownQuran.js"></script>
+            
+            <link href="css/jquery.mobile.structure-1.2.0.min.css" rel="stylesheet">
+            <link href="css/jquery.mobile.theme-1.2.0.min.css" rel="stylesheet">
+            <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/jquery.mobile-1.2.0.min.css" rel="stylesheet">
                                         
-                                        <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/photoswipe.css" rel="stylesheet">
-                                            <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/style.css" rel="stylesheet">
-                            
+            <link href="css/photoswipe.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+            <script type="text/javascript" src="https://raw.github.com/blasten/turn.js/master/turn.min.js"></script>
+	                 
+            
+      <style type="text/css">
+         body{
+            background:#ccc;
+         }
+         #book{
+           width:960px;
+           height:600px;
+         }
+         #book .turn-page{
+           background-color:white;
+         }
+         #book .cover{
+           background:#333;
+         }
+         #book .cover h1{
+           color:white;
+           text-align:center;
+           font-size:50px;
+           line-height:500px;
+           margin:0px;
+         }
+         #book .loader{
+           background-image:url(http://images.cableorganizer.com/ajax_loader.gif);
+           width:24px;
+           height:24px;
+           display:block;
+           position:absolute;
+           top:238px;
+           left:188px;
+         }
+         #book .data{
+           text-align:center;
+           font-size:40px;
+           color:#999;
+           line-height:500px;
+         }
+         #controls{
+           width:800px;
+           text-align:center;
+           margin:20px 0px;
+           font:30px arial;
+         }
+         #controls input, #controls label{
+           font:30px arial;
+         }
+         #book .odd{
+           background-image:-webkit-linear-gradient(left, #FFF 95%, #ddd 100%);
+           background-image:-moz-linear-gradient(left, #FFF 95%, #ddd 100%);
+           background-image:-o-linear-gradient(left, #FFF 95%, #ddd 100%);
+           background-image:-ms-linear-gradient(left, #FFF 95%, #ddd 100%);
+         }
+         #book .even{
+           background-image:-webkit-linear-gradient(right, #FFF 95%, #ddd 100%);
+           background-image:-moz-linear-gradient(right, #FFF 95%, #ddd 100%);
+           background-image:-o-linear-gradient(right, #FFF 95%, #ddd 100%);
+           background-image:-ms-linear-gradient(right, #FFF 95%, #ddd 100%);
+         }
+      </style>
+               
             
             <script>
-               document.addEventListener("deviceready", onDeviceReady, false);
-                
-                var quranChapters = ["Al Fatiha", "AlBaqara","Al Imran","An Nisa'","Al Maida","Al An'am","Al A'raf","Al Anfal","At Tawba", "Yunus","Hud","Yusuf","Ar Ra'd", "Ibrahim", "Al Hijr", "An nahl","Al Isra'","Al Kahaf","Marayam","Ta Ha","Al Anbiya'","Al Hajj","Al Mu'minun","An Nur","Al Furqan","Ash Shu'ara'","An Naml","Al Qasas","Al 'Ankabut","Ar Rum"];
-                
+               //document.addEventListener("deviceready", onDeviceReady, false);
             </script>
     </head>
    
@@ -51,7 +109,7 @@
             </div>
             
             <div data-role="content" data-theme="a">
-                <img src="http://thegospelcoalition.org/blogs/tgc/files/2013/06/kaaba.jpg" style="width: 100%;max-width: 100%"/>
+                <img src="icons/home-bg.jpg" style="width:100%;max-width:100%;height:100%;max-height:100%"/>
             </div>
             
             <div data-role="footer" data-position="fixed">
@@ -175,8 +233,22 @@
                 <a data-role="button" href="#portfolio" data-transition="flip" data-icon="arrow-l" data-corners="false">Back</a>
             </div>
             
-            <div data-role="content">
-                <img src="https://farm4.staticflickr.com/3693/9046044952_8b7f2be179_z.jpg" style="width: 100%;max-width: 100%"/>       
+            <div data-role="content" data-theme="a">
+                <!-- img src="https://farm4.staticflickr.com/3693/9046044952_8b7f2be179_z.jpg" style="width: 100%;max-width: 100%"/ -->
+                      <!-- ***** start ******* -->
+                      <center>
+                      <div id="book" style="border:2px solid;">
+        				   <div class="cover">
+            				   <h1>The Bible</h1>
+         				   </div>
+      				  </div>
+	                  </center>
+	                  
+      				  <div id="controls">
+         					<label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span>
+      				  </div>
+      				  <!-- ***** end ******* -->
+           
             </div>
             
             <div data-role="footer" data-position="fixed">
