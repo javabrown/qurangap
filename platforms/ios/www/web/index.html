@@ -17,13 +17,14 @@
             <script src="js/jquery-1.8.3.min.js"></script>
             <script src="js/jquery.mobile-1.2.0.min.js"></script>
             <script src="js/jBrownQuran.js"></script>
-            
+
+            <link href="css/photoswipe.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
             <link href="css/jquery.mobile.structure-1.2.0.min.css" rel="stylesheet">
             <link href="css/jquery.mobile.theme-1.2.0.min.css" rel="stylesheet">
             <link href="http://www.jquery4u.com/demos/mobileportfoliosite/css/jquery.mobile-1.2.0.min.css" rel="stylesheet">
                                         
-            <link href="css/photoswipe.css" rel="stylesheet">
-            <link href="css/style.css" rel="stylesheet">
+
             <script type="text/javascript" src="https://raw.github.com/blasten/turn.js/master/turn.min.js"></script>
 	                 
             
@@ -236,13 +237,28 @@
             <div data-role="content" data-theme="a">
                 <!-- img src="https://farm4.staticflickr.com/3693/9046044952_8b7f2be179_z.jpg" style="width: 100%;max-width: 100%"/ -->
                       <!-- ***** start ******* -->
-                      <center>
-                      <div id="book" style="border:2px solid;">
-        				   <div class="cover">
+
+                         <div id="book" style="border:2px solid;">
+        				    <div class="cover">
             				   <h1>The Bible</h1>
-         				   </div>
-      				  </div>
-	                  </center>
+         				    </div>
+      				     </div>
+                         
+                         <script>
+                               $(document).on("pageinit", "#quran", function () {
+                                            alert('mobileinit begin');
+                                            $.mobile.ignoreContentEnabled = true;
+                                            
+                                              
+                                              $("#book").turn({
+                                                              width: 400,
+                                                              height: 300,
+                                                              autoCenter: true
+                                                              });
+                                             alert('mobileinit end');
+                                    }
+                               );
+                        </script>
 	                  
       				  <div id="controls">
          					<label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span>
