@@ -9,14 +9,14 @@ var jBrownQuran = {
 				                      "Wa Manyaqnut", "Wa Mali", "Faman Azlam", "Elahe Yuruddo", "Ha a Meem", "Qala Fama Khatbukum", 
 				                      "Qadd Sami Allah", "Tabarakallazi", "Amma Yatasa aloon"],
 				
-				loadChapters: function(){
+				loadChapters: function(){ 
 					document.getElementById('chapter-ul').innerHTML = "";
 					//this.loadChapter('test-1', 'test', 'chapter-ul')
 					
 					for (var i = 0; i < this.__quranChapters.length; i++) {
 					  this.loadChapter(this.__quranChapters[i], this.__quranChaptersEng[i], 'chapter-ul');
 					}
-				},
+				},  
 							
 				loadChapter: function(chapter_number, chapter_name, chapter_holder_element_id){
 				    var child_pos = 'ui-first-child';
@@ -62,82 +62,71 @@ var jPages = {
     __numberOfPages : 610,
     __path : "http://cms.javabrown.com/qfetcher.php?output=base641&verse=1&chapter=",
   
-    addPage : function(page, book) {
-             var qp = "http://cms.javabrown.com/qfetcher.php?output=base641&verse=1&chapter=";
-             // First check if the page is already in the book
-             if (!book.turn('hasPage', page)) {
-                 // Create an element for this page
-                 //var element = $('<div />', {'class': 'page '+((page%2==0) ? 'odd' : 'even'), 'id': 'page-'+page}).html('<i class="loader"></i>');
-                 var element = $('<div />', {'class': 'page '+((page%2==0) ? 'odd' : 'even'), 'id': 'page-'+page}).html('<i class="loader"></i>');
-
-                 
-                 // If not then add the page
-                 book.turn('addPage', element, page);
-                 // Let's assum that the data is comming from the server and the request takes 1s.
-                 setTimeout(function(){
-					 var style="background-image:url('"+qp+page+"');";
-					 var image_tag = "<img style='width:100%;max-width:100%' src='"+qp+page+"'></img>";
-					 element.html('<div class="data">'+ image_tag +'</div>');
-					 
-                 }, 615);
-                 
-             }
+    
+     numberOfPages : 610,
+     path : "http://cms.javabrown.com/qfetcher.php?output=base641&verse=1&chapter=",
+     ext : ".jpg",
+    
+     addPage : function(page, book) {
+         // First check if the page is already in the book
+         if (!book.turn('hasPage', page)) {
+             // Create an element for this page
+             var element = $('<div />', {'class': 'page '+((page%2==0) ? 'odd' : 'even'), 'id': 'page-'+page}).html('<i class="loader"></i>');
+             // If not then add the page
+             book.turn('addPage', element, page);
+             // Let's assum that the data is comming from the server and the request takes 1s.
+             setTimeout(function(){
+                        //var style="background-image:url(file://"+path+page+ext+");";
+                        //var style="background-image:url('"+path+page+"');";
+                        //var image_tag = "<img style='width:100%;max-height:100%' src='"+path+page+"'></img>";
+                        //element.html('<div class="data">'+ image_tag +'</div>');
+                        var image_tag = "<center><img style='width:100%;max-height:100%' src='"+jPages.path+ page+"'></img></center>";
+                         element.html(image_tag); //alert(image_tag)
+                        
+                        }, 615);
+              //
+         }
      },
      
      launch : function(){
-             $('#book').turn({
-                  acceleration: true,
-                  pages: this.__numberOfPages,
-                  elevation: 50,
-                  gradients: !$.isTouch,
-                  when: {
-                      turning: function(e, page, view) {
-                         // Gets the range of pages that the book needs right now
-                         var range = $(this).turn('range', page);
-                         
-                         // Check if each page is within the book
-                         for (page = range[0]; page<=range[1]; page++){
-                           jPages.addPage(page, $(this));
-                         }
-                      },
-                      
-                      turned: function(e, page) {
-                          $('#page-number').val(page);
-                      }
-                  }
-             });
-             
-             $('#number-pages').html(this.__numberOfPages);
-             
-             $('#page-number').keydown(function(e){
-                   if (e.keyCode==13){
-                       $('#book').turn('page', $('#page-number').val());
-                   }
-             });
-              
-             //alert('turn launched');
+    	 	$('#book').turn(
+    	    	     {
+    	    	                     width: $("#quranpage").width(),//$(this).css('width'),
+    	    	                     height: $("#quranpage").height(),//$(this).css('height'),
+    	    	                     autoCenter: true,
+    	    	                     display: "single",
+    	    	                     acceleration: true,
+    	    	                     pages: jPages.numberOfPages,
+    	    	                     elevation: 50,
+    	    	                     gradients: !$.isTouch,
+    	    	                     when: {
+    	    	                         turning: function(e, page, view) {
+    	    	                         // Gets the range of pages that the book needs right now
+    	    	                             var range = $(this).turn('range', page);
+    	    	                    
+    	    	                             // Check if each page is within the book
+    	    	                             for (page = range[0]; page<=range[1]; page++){
+    	    	                            	 jPages.addPage(page, $(this));
+    	    	                             }
+    	    	                         },
+    	    	                    
+    	    	                         turned: function(e, page) {
+    	    	                             //$('#page-number').val(page);
+    	    	                             //alert(page);
+    	    	                         }
+    	    	                   }
+    	    });
      }
          
 };
 
-
-/*$(document).on("pageinit", "#quran", function(){
-    alert("quran init called");
-    
-    jPages.launch();
-    
-    
-	
-});*/
-/*
-$(document).on('pagebeforeshow', '#qurandetail', function(){
-               $('#flipbook').turn({
-                                   width: 400,
-                                   height: 300,
-                                   autoCenter: true
-                                   });
-               $('#qurandetail').trigger('pagecreate');
-               alert('done');
+ 
+$(document).on('mobileinit', function () {
+    $.mobile.ignoreContentEnabled = true;
 });
-*/
+
+$(document).on('pageinit', '#quranpage', function(){
+	jPages.launch();
+	alert('launched');
+});
 //*******************
