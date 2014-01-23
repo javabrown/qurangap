@@ -14,6 +14,7 @@
         <!-- css begin -->
         <link href="css/photoswipe.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+       <link href="css/tparty.css" rel="stylesheet">
           
         <link href="css/jquery.mobile.structure-1.2.0.min.css" rel="stylesheet">
         <link href="css/jquery.mobile.theme-1.2.0.min.css" rel="stylesheet">
@@ -38,7 +39,7 @@
                 color:white;
                 text-align:center;
                 font-size:50px;
-                line-height:500px;
+                /*line-height:500px;*/
                 margin:0px;
             }
             #book .loader{
@@ -47,14 +48,14 @@
                 height:24px;
                 display:block;
                 position:absolute;
-                top:238px;
-                left:188px;
+                top:100px;
+                left:200px;
             }
             #book .data{
                 text-align:center;
                 font-size:40px;
                 color:#999;
-                line-height:500px;
+                /*line-height:500px;*/
             }
             #controls{
                 width:800px;
@@ -113,11 +114,14 @@
              // Let's assum that the data is comming from the server and the request takes 1s.
              setTimeout(function(){
                         //var style="background-image:url(file://"+path+page+ext+");";
-                        var style="background-image:url('"+path+page+"');";
-                        var image_tag = "<img style='width:100%;max-height:100%' src='"+path+page+"'></img>";
-                        element.html('<div class="data">'+ image_tag +'</div>');//alert(image_tag);
+                        //var style="background-image:url('"+path+page+"');";
+                        //var image_tag = "<img style='width:100%;max-height:100%' src='"+path+page+"'></img>";
+                        //element.html('<div class="data">'+ image_tag +'</div>');
+                        var image_tag = "<img style='width:100%;height:100%;max-width:100%;max-height:100%' src='"+path+page+"'></img>";
+                         element.html(image_tag);
+                        
                         }, 615);
-              
+              //
          }
      }
  </script>
@@ -126,7 +130,7 @@
             $(document).on('mobileinit', function () {
                            $.mobile.ignoreContentEnabled = true;
             });
-                           
+
             $(document).on('pageinit', '#quranpage', function(){
                                           
                                           /*
@@ -146,8 +150,8 @@
                            //alert(width +"-"+height);
                            $('#book').turn(
                             {
-                                            width: $(this).css('width'),
-                                            height: height,//$(this).css('height'),
+                                            width: $("#quranpage").width(),//$(this).css('width'),
+                                            height: $("#quranpage").height(),//$(this).css('height'),
                                             autoCenter: true,
                                             display: "single",
                                             acceleration: true,
@@ -256,14 +260,14 @@
                 </div><!-- /navbar -->
             </div>
             
-            <div data-role="content">
+            <div data-role="content" data-theme="a">
                 <div class="pt-menu">
                     <a data-theme="c" data-corners="false" data-role="button"  data-transition="fade" href="#portfolio">
                         <img src="icons/menu-icon-quran.jpg" width="65px" alt="rss" style="display: block; margin: 0 auto">
                             Quraan
                         </img>
                     </a>
-                    <a data-theme="c" data-corners="false" data-role="button"  data-transition="fade" href="#portfolio">
+                    <a data-theme="c" data-corners="false" data-role="button"  data-transition="fade" href="#reminder_detail">
                         <img src="icons/reminder-icon.png" width="65px" alt="rss" style="display: block; margin: 0 auto">
                             Reminder
                         </img>
@@ -281,7 +285,7 @@
 
 
 
-        <!-- ******* page-6 -begin- ********* -->
+        <!-- ******* page-4 -begin- ********* -->
         <div data-role="page" id="portfolio" data-title="portfolio">
             <div data-role="header" data-position="fixed">
                 <h1>Holly Qur'an</h1>
@@ -324,26 +328,20 @@
                 <p class="copyright">&copy; Copyright 2013</p>
             </div>
         </div>
-        <!-- ******* page-6 -end- ********* -->
+        <!-- ******* page-4 -end- ********* -->
 
 
 
 
-<!-- ******* page-6 -begin- ********* -->
-<div data-role="page" id="quranpage"  data-title="home">
+<!-- ******* page-5 -begin- ********* -->
+<div data-role="page" id="reminder_detail"  data-title="home">
     <div data-role="header" data-position="fixed">
         <h1>Alif Lam Meem</h1>
         <a data-role="button" href="#portfolio" data-transition="flip" data-icon="arrow-l" data-corners="false">Back</a>
     </div>
     
-    <div data-role="content">
-        <div class="pt-menu">
-            <div id="book" style="width:100%; height:100%;">
-                <div class="cover">
-                    <h1>The Quran</h1>
-                </div>
-            </div>
-        </div>
+    <div data-role="content" data-theme="a">
+        <img src="http://cms.javabrown.com/qfetcher.php?output=base641&verse=1&chapter=2"/>
         
     </div>
     
@@ -351,9 +349,48 @@
         <p class="copyright">&copy; Copyright 2013</p>
     </div>
 </div>
+<!-- ******* page-5 -end- ********* -->
+
+
+<!-- ******* page-6 -begin- ********* -->
+<div data-role="page" id="quranpage"  data-title="home">
+    <div data-role="header" data-position="fixed" data-fullscreen="false">
+        <h1>Alif Lam Meem</h1>
+        <a data-role="button" href="#portfolio" data-transition="flip" data-icon="arrow-l" data-corners="false">Back</a>
+        <a data-icon="grid" data-mini="true" href="#portfolio" data-transition="flip" data-icon="arrow-r" data-corners="false"></a>
+    </div>
+    
+    <div data-role="content" data-theme="a">
+        <div data-role="listview">
+        
+                <p id="book">
+                    <!--div class="cover">
+                        <h1>The Quran</h1>
+                    </div-->
+                </p>
+             
+            <!--div  id="book" data-position="fixed">
+                <div class="cover" style="width:auto">
+                    <h1>The Quran</h1>
+                </div>
+            </div-->
+        </div>
+    </div>
+    
+    <div data-role="footer" data-position="fixed">
+        <!-- *** start -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+            </ul>
+        </div><!-- /navbar -->
+        <!-- *** end -->
+        <!--p class="copyright">&copy; Copyright 2013</p-->
+    </div>
+</div>
 <!-- ******* page-6 -end- ********* -->
-
-
 
 
     </body>

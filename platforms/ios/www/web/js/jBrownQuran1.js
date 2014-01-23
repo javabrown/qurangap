@@ -24,14 +24,14 @@ var jBrownQuran = {
                        "<li data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='div' data-icon='false' data-iconpos='right' data-theme='c' class='portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb "+ child_pos +" ui-btn-up-d ui-corner'>"+
                        "    <div class='ui-btn-inner ui-li ui-li-has-alt'>"+
                        "         <div class='ui-btn-text'>"+
-                       "             <a href='#quranpage' class='ui-link-inherit ui-corner-none'>"+
+                       "             <a href='quran-chapters.html' class='ui-link-inherit ui-corner-none'>"+
                        "                 <img src='icons/nav-icon-quran.jpg' class='ui-li-thumb ui-corner-none'>"+
                        "                     <h3 class='ui-li-heading'>"+ chapter_number +"</h3>"+
                        "                     <p class='ui-li-desc'>"+ chapter_name +"</p>"+
                        "             </a>"+
                        "         </div>"+
                        "     </div>"+
-                       "     <a href='#quranpage' title='Purchase album' class='ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c' data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='span' data-icon='false' data-iconpos='notext' data-theme='c'>"+
+                       "     <a href='quran-chapters.html' title='Purchase album' class='ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c' data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='span' data-icon='false' data-iconpos='notext' data-theme='c'>"+
                        "         <span class='ui-btn-inner'>"+
                        "             <span class='ui-btn-text'></span>"+
                        "             <span data-corners='true' data-shadow='true' data-iconshadow='true' data-wrapperels='span' data-icon='arrow-r' data-iconpos='notext' data-theme='b' title='' class='ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext'>"+

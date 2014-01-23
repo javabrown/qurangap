@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="ui-mobile" xmlns="http://www.w3.org/1999/xhtml"><head><!-- base href="file:///Users/rajakhan/Desktop/gap-apps/qurangap/platforms/ios/www/web/index.html" -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+            
+             
+            <script src="index_files/cordova-2.js"></script>
+            
+            <!-- plug -->
+            <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+            <meta name="keywords" content="mobile portfolio, mobile portfolio site">
+            <meta name="author" content="raja khan">
+            <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+                            
+            <script src="index_files/jquery-1.js"></script>
+            <script src="index_files/jquery.js"></script>
+            <script src="index_files/jBrownQuran.js"></script>
+            <script type="text/javascript" src="index_files/turn.txt"></script>
+	                 
+            <link href="index_files/jquery.css" rel="stylesheet">
+            <link href="index_files/jquery_002.css" rel="stylesheet">
+            <link href="index_files/jquery_003.css" rel="stylesheet">
+                                        
+            <link href="index_files/photoswipe.css" rel="stylesheet">
+            <link href="index_files/style.css" rel="stylesheet">
+            
+            
+      <style type="text/css">
+         body{
+            background:#ccc;
+         }
+         #book{
+           width:960px;
+           height:600px;
+         }
+         #book .turn-page{
+           background-color:white;
+         }
+         #book .cover{
+           background:#333;
+         }
+         #book .cover h1{
+           color:white;
+           text-align:center;
+           font-size:50px;
+           line-height:500px;
+           margin:0px;
+         }
+         #book .loader{
+           background-image:url(http://images.cableorganizer.com/ajax_loader.gif);
+           width:24px;
+           height:24px;
+           display:block;
+           position:absolute;
+           top:238px;
+           left:188px;
+         }
+         #book .data{
+           text-align:center;
+           font-size:40px;
+           color:#999;
+           line-height:500px;
+         }
+         #controls{
+           width:800px;
+           text-align:center;
+           margin:20px 0px;
+           font:30px arial;
+         }
+         #controls input, #controls label{
+           font:30px arial;
+         }
+         #book .odd{
+           background-image:-webkit-linear-gradient(left, #FFF 95%, #ddd 100%);
+           background-image:-moz-linear-gradient(left, #FFF 95%, #ddd 100%);
+           background-image:-o-linear-gradient(left, #FFF 95%, #ddd 100%);
+           background-image:-ms-linear-gradient(left, #FFF 95%, #ddd 100%);
+         }
+         #book .even{
+           background-image:-webkit-linear-gradient(right, #FFF 95%, #ddd 100%);
+           background-image:-moz-linear-gradient(right, #FFF 95%, #ddd 100%);
+           background-image:-o-linear-gradient(right, #FFF 95%, #ddd 100%);
+           background-image:-ms-linear-gradient(right, #FFF 95%, #ddd 100%);
+         }
+      </style>
+                            
+            
+            <script>
+               //document.addEventListener("deviceready", onDeviceReady, false);
+            </script>
+    <title></title></head>
+   
+    
+    <body class="ui-mobile-viewport ui-overlay-c">
+        
+        <!-- splace page -->
+        <div style="padding-top: 76px; padding-bottom: 39px; min-height: 183px;" class="ui-page ui-body-c ui-page-header-fixed ui-page-footer-fixed ui-page-active" tabindex="0" data-url="splace" data-role="page" id="splace">
+            <div role="banner" class="ui-header ui-bar-a ui-header-fixed slidedown" data-role="header" data-position="fixed">
+                <h1 aria-level="1" role="heading" class="ui-title"><a class="ui-link" href="#splace" data-icon="grid">القرآن الكريم</a></h1>
+                <div role="navigation" class="ui-navbar ui-mini" data-role="navbar" data-iconpos="left">
+                    <ul class="ui-grid-b">
+                        <li class="ui-block-a"><a class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left" data-inline="true" data-theme="a" data-iconpos="left" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false" href="#home" data-icon="home"><span class="ui-btn-inner"><span class="ui-btn-text">Home</span><span class="ui-icon ui-icon-home ui-icon-shadow">&nbsp;</span></span></a></li>
+                        <li class="ui-block-b"><a class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-up-a" data-inline="true" data-theme="a" data-iconpos="left" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false" href="#setting" data-icon="gear"><span class="ui-btn-inner"><span class="ui-btn-text">Setting</span><span class="ui-icon ui-icon-gear ui-icon-shadow">&nbsp;</span></span></a></li>
+                        <li class="ui-block-c"><a class="ui-btn ui-btn-up-a ui-btn-inline ui-btn-icon-left" data-inline="true" data-theme="a" data-iconpos="left" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false" href="#" data-icon="search"><span class="ui-btn-inner"><span class="ui-btn-text">Search</span><span class="ui-icon ui-icon-search ui-icon-shadow">&nbsp;</span></span></a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+            
+            <div role="main" class="ui-content ui-body-a" data-role="content" data-theme="a">
+                <img src="index_files/home-bg.jpg" style="width:100%;max-width:100%;height:100%;max-height:100%">
+            </div>
+            
+            <div role="contentinfo" class="ui-footer ui-bar-a ui-footer-fixed slideup" data-role="footer" data-position="fixed">
+                <p class="copyright">© Copyright 2013</p>
+            </div>
+        </div>
+        
+        <!-- setting page -->
+        <div data-url="setting" data-role="page" id="setting" data-title="setting">
+            <div data-role="header" data-position="fixed">
+                <h1><a href="#splace" data-icon="home">القرآن الكريم</a></h1>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#setting" data-icon="gear" class="ui-btn-active">Setting</a></li>
+                        <li><a href="#" data-icon="search">Search</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                
+                <!-- a data-role="button" href="#splace" data-direction="reverse" data-icon="home" data-corners="false">Home</a -->
+            </div>
+            
+            <div data-role="content" data-theme="a">
+                <div class="pt-menu">
+                    ddddddddddddddddd
+                </div>
+                
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">© Copyright 2013</p>
+            </div>
+        </div>
+        
+        
+        
+        <!-- home page -->
+        <div data-url="home" data-role="page" id="home" data-title="home">
+            <div data-role="header" data-position="fixed">
+                <h1><a href="#splace" data-icon="home">لقرآن الكريم</a></h1>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+                        <li><a href="#setting" data-icon="gear">Setting</a></li>
+                        <li><a href="#" data-icon="search">Search</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+            
+            <div data-role="content">
+                <div class="pt-menu">
+                    <a data-theme="c" data-corners="false" data-role="button" data-transition="fade" href="#portfolio">
+                        <img src="index_files/menu-icon-quran.jpg" alt="rss" style="display: block; margin: 0 auto" width="65px">
+                            Quraan
+                        
+                    </a>
+                    <a data-theme="c" data-corners="false" data-role="button" data-transition="fade" href="#portfolio">
+                        <img src="index_files/reminder-icon.png" alt="rss" style="display: block; margin: 0 auto" width="65px">
+                            Reminder
+                        
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">© Copyright 2013</p>
+            </div>
+        </div>
+        
+        
+        <!-- page-2 -->
+        <div data-url="portfolio" data-role="page" id="portfolio" data-title="portfolio">
+            <div data-role="header" data-position="fixed">
+                <h1>Holly Qur'an</h1>
+                <a data-role="button" href="#home" data-direction="reverse" data-icon="home" data-corners="false">Home</a>
+            </div>
+            
+            <div data-role="content" data-theme="a">
+                 
+                    <ul id="chapter-ul" data-inset="true" data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-corner-none" data-theme="b">
+                        
+                        <!-- chapter item 1 -->
+                        <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="false" data-iconpos="right" data-theme="c" class="portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb ui-first-child ui-btn-up-d ui-corner">
+                            <div class="ui-btn-inner ui-li ui-li-has-alt">
+                                <div class="ui-btn-text">
+                                    <a href="#quran" class="ui-link-inherit ui-corner-none">
+                                        <img src="index_files/nav-icon-quran.jpg" class="ui-li-thumb ui-corner-none">
+                                            <h3 class="ui-li-heading">Chapter 1:</h3>
+                                            <p class="ui-li-desc">Al-Fatihah</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#quran" title="Purchase album" class="ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="false" data-iconpos="notext" data-theme="c">
+                                <span class="ui-btn-inner">
+                                    <span class="ui-btn-text"></span>
+                                    <span data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-r" data-iconpos="notext" data-theme="b" title="" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext">
+                                        <span class="ui-btn-inner">
+                                            <span class="ui-btn-text"></span>
+                                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">© Copyright 2013</p>
+            </div>
+        </div>
+        
+        
+        <!-- page-3 -->
+        <div data-url="quran" data-role="page" id="quran" data-title="portfolio">
+            <div data-role="header" data-position="fixed">
+                <h1>Portfolio Gallery 2</h1>
+                <a data-role="button" href="#portfolio" data-transition="flip" data-icon="arrow-l" data-corners="false">Back</a>
+            </div>
+            
+            <div data-role="content">
+                <!-- img src="https://farm4.staticflickr.com/3693/9046044952_8b7f2be179_z.jpg" style="width: 100%;max-width: 100%"/ -->
+                      <!-- ***** start ******* -->
+                      <div id="book">
+        				   <div class="cover">
+            				   <h1>The Bible</h1>
+         				   </div>
+      				  </div>
+	  
+      				  <div id="controls">
+         					<label for="page-number">Page:</label> <input size="3" id="page-number" type="text"> of <span id="number-pages"></span>
+      				  </div>
+      				  <!-- ***** end ******* -->
+           
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <p class="copyright">© Copyright 2013</p>
+            </div>
+        </div>
+        
+        
+    
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div></body></html>
