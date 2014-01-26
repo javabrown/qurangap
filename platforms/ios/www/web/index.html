@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="mobile portfolio, mobile portfolio site">
 <meta name="author" content="raja khan">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 	<!-- css begin -->
 <link href="css/photoswipe.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 <script src="cordova-2.5.0.js"></script>
 
 <script src="js/jquery-1.8.3.min.js"></script>
-<script src="http://cms.javabrown.com/quran/web/js/turn.js"></script>
+<script src="js/turn.js"></script>
 <script src="js/jquery.mobile-1.2.0.min.js"></script>
 
 <script src="js/jBrownQuran.js"></script>
@@ -54,6 +54,18 @@ body {
  #book .odd{
    background-image: -webkit-gradient(linear, left top, right top, color-stop(55%,#FFF), color-stop(100%,#ddd));
  }
+</style>
+
+
+<style>
+    #book .shadow,
+    #book.shadow{
+        -webkit-box-shadow: 0 4px 10px #666;
+        -moz-box-shadow: 0 4px 10px #666;
+        -ms-box-shadow: 0 4px 10px #666;
+        -o-box-shadow: 0 4px 10px #666;
+        box-shadow: 0 4px 10px #666;
+    }
 </style>
 
 
@@ -243,17 +255,15 @@ body {
 		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-fullscreen="false">
 			<h1>Alif Lam Meem</h1>
 			<a data-role="button" href="#portfolio" data-transition="flip"
-				data-icon="arrow-l" data-corners="false">Back</a>
+				data-icon="arrow-l" data-corners="false" onclick="jPages.destroy();">Back</a>
 			<a data-icon="grid" href="#portfolio" 
 			   data-transition="flip" data-icon="arrow-r" data-corners="false"></a>
 		</div>
 
-		<div data-role="content" data-theme="a">
-		 
-				<p id="book">
-				</p>
- 
-			 
+		<div data-role="content listview" data-theme="a" id="book">
+           
+            
+            
 		</div>
 
 		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
