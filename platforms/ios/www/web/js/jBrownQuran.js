@@ -14,24 +14,24 @@ var jBrownQuran = {
 					//this.loadChapter('test-1', 'test', 'chapter-ul')
 					
 					for (var i = 0; i < this.__quranChapters.length; i++) {
-					  this.loadChapter(this.__quranChapters[i], this.__quranChaptersEng[i], 'chapter-ul');
+					  this.loadChapter(i, this.__quranChapters[i], this.__quranChaptersEng[i], 'chapter-ul');
 					}
 				},  
 							
-				loadChapter: function(chapter_number, chapter_name, chapter_holder_element_id){
+				loadChapter: function(chapter_number, chapter_name_arbic, chapter_name, chapter_holder_element_id){
 				    var child_pos = 'ui-first-child';
 					var chapter_li = 
                        "<li data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='div' data-icon='false' data-iconpos='right' data-theme='c' class='portfolio-item ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-li-has-thumb "+ child_pos +" ui-btn-up-d ui-corner'>"+
                        "    <div class='ui-btn-inner ui-li ui-li-has-alt'>"+
                        "         <div class='ui-btn-text'>"+
-                       "             <a href='#quranpage' class='ui-link-inherit ui-corner-none'>"+
+                       "             <a onclick='loadVerse("+chapter_number+")' href='#quranpage' class='ui-link-inherit ui-corner-none'>"+
                        "                 <img src='icons/nav-icon-quran.jpg' class='ui-li-thumb ui-corner-none'>"+
-                       "                     <h3 class='ui-li-heading'>"+ chapter_number +"</h3>"+
+                       "                     <h3 class='ui-li-heading'>"+ chapter_name_arbic +"</h3>"+
                        "                     <p class='ui-li-desc'>"+ chapter_name +"</p>"+
                        "             </a>"+
                        "         </div>"+
                        "     </div>"+
-                       "     <a href='#quranpage' title='Purchase album' class='ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c' data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='span' data-icon='false' data-iconpos='notext' data-theme='c'>"+
+                       "     <a onclick='loadVerse("+chapter_number+")' href='#quranpage' title='Purchase album' class='ui-li-link-alt ui-btn ui-btn-icon-notext ui-btn-up-c' data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='span' data-icon='false' data-iconpos='notext' data-theme='c'>"+
                        "         <span class='ui-btn-inner'>"+
                        "             <span class='ui-btn-text'></span>"+
                        "             <span data-corners='true' data-shadow='true' data-iconshadow='true' data-wrapperels='span' data-icon='arrow-r' data-iconpos='notext' data-theme='b' title='' class='ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-btn-icon-notext'>"+
@@ -59,13 +59,18 @@ $(document).on("pageinit", "#portfolio", function(){
 //*******************
 
 var jPages = {
-    __numberOfPages : 610,
-    __path : "http://cms.javabrown.com/qfetcher.php?output=base641&verse=1&chapter=",
-  
-    
      numberOfPages : 610,
      path : "http://cms.javabrown.com/qfetcher.php?output=base641&verse=1&chapter=",
      ext : ".jpg",
+    
+     reinit : function(verse){
+        this.path = "http://cms.javabrown.com/qfetcher.php?output=base641&verse="+verse+"&chapter=";
+        this.launch();
+     },
+    
+     destroy : function (){
+        $("#book").html("");
+     },
     
      addPage : function(page, book) {
          // First check if the page is already in the book
@@ -77,13 +82,12 @@ var jPages = {
              // Let's assum that the data is comming from the server and the request takes 1s.
              setTimeout(function(){
                         //var style="background-image:url(file://"+path+page+ext+");";
-                        //var style="background-image:url('"+path+page+"');";
+                        var style="background-image:url('"+jPages.path+page+"');";
                         //var image_tag = "<img style='width:100%;max-height:100%' src='"+path+page+"'></img>";
                         //element.html('<div class="data">'+ image_tag +'</div>');
-                        var image_tag = "<center><img style='width:100%;max-height:100%' src='"+jPages.path+ page+"'></img></center>";
-                         element.html(image_tag); //alert(image_tag)
-                        
-                        }, 615);
+                        var image_tag = "<img src='"+jPages.path+ page+"' width='auto' height='auto'></img>";
+                        element.html(image_tag); //alert(image_tag)
+             }, 615);
               //
          }
      },
@@ -98,7 +102,7 @@ var jPages = {
     	    	                     acceleration: true,
     	    	                     pages: jPages.numberOfPages,
     	    	                     elevation: 50,
-    	    	                     gradients: !$.isTouch,
+    	    	                     gradients: true,//!$.isTouch,
     	    	                     when: {
     	    	                         turning: function(e, page, view) {
     	    	                         // Gets the range of pages that the book needs right now
@@ -116,17 +120,43 @@ var jPages = {
     	    	                         }
     	    	                   }
     	    });
-     }
-         
+     },
+     refreshView : function (){
+        var height = $("#quranpage").height();
+        var width =  $("#quranpage").width();
+        $("#quranpage").find('img').css('height',height);
+        $("#quranpage").find('img').css('width',width);
+        $('#book').turn('size', width, height);
+    }
+    
 };
 
- 
+
 $(document).on('mobileinit', function () {
     $.mobile.ignoreContentEnabled = true;
 });
 
+
+
+function getURLParameter(name) {
+    var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    return results[1] || 0;
+}
+
+function loadVerse(verse){
+    jPages.reinit(verse);
+}
+
 $(document).on('pageinit', '#quranpage', function(){
-	jPages.launch();
-	alert('launched');
+	//jPages.launch();
 });
-//*******************
+
+
+$(window).bind( 'orientationchange', function(e){
+    //alert($.event.special.orientationchange.orientation());
+    if ($.event.special.orientationchange.orientation() == "portrait") {
+               jPages.refreshView();
+    } else {
+               jPages.refreshView();
+    }
+});
