@@ -60,16 +60,19 @@ $(document).on("pageinit", "#portfolio", function(){
 
 var jPages = {
      numberOfPages : 610,
-     path : "http://cms.javabrown.com/qfetcher.php?output=base641&verse=1&chapter=",
+     //path : "quran-data/quran-page-",
+     path : "http://cms.javabrown.com/qfetcher.php?output=base64&verse=1&chapter=",
      ext : ".jpg",
     
      reinit : function(verse){
-        this.path = "http://cms.javabrown.com/qfetcher.php?output=base641&verse="+verse+"&chapter=";
+        //this.path = "quran-data/quran-page-";
+        this.path = "http://cms.javabrown.com/qfetcher.php?verse="+verse+"&chapter=";
         this.launch();
      },
     
      destroy : function (){
         $("#book").html("");
+         //$("#flipbook").turn("destroy");
      },
     
      addPage : function(page, book) {
@@ -81,14 +84,17 @@ var jPages = {
              book.turn('addPage', element, page);
              // Let's assum that the data is comming from the server and the request takes 1s.
              setTimeout(function(){
-                        //var style="background-image:url(file://"+path+page+ext+");";
-                        var style="background-image:url('"+jPages.path+page+"');";
-                        //var image_tag = "<img style='width:100%;max-height:100%' src='"+path+page+"'></img>";
-                        //element.html('<div class="data">'+ image_tag +'</div>');
-                        var image_tag = "<img src='"+jPages.path+ page+"' width='auto' height='auto'></img>";
-                        element.html(image_tag); //alert(image_tag)
+                       var img_path = jPages.path+ page;
+                       //$.get(img_path, function( data ) {
+                       //       alert( "Load was performed." + data);
+                       //       element.html(data);
+                       //});
+                       var style="background-image:url('"+jPages.path+page+"');";
+                       var image_tag = "<img src='"+jPages.path+ page+"' width='auto' height='auto'></img>";
+                       //var image_tag = "<img src='"+jPages.path+ page+".jpg' width='auto' height='auto'></img>";
+                       element.html(image_tag); //alert(image_tag)
              }, 615);
-              //
+             
          }
      },
      
